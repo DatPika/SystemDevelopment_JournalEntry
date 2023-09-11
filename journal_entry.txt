@@ -1,4 +1,4 @@
-2023-09-10: 
+2023-09-11: 
 filler_text_here. 
-Sunday,  
+Monday,  
 get-date -f 'dddd MMM. dd, xx:xx \to hh:mm (x \h xx \min - a\t \ho\me):'

@@ -1,6 +1,4 @@
 @echo off
-:: The goal of this script is to create a new personal journal entry for the System Development course.
-
 :: Planning out the code
 :: [Today's date] > journal_entry.txt
 :: add more content/formatting
