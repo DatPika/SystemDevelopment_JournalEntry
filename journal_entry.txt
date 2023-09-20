@@ -1,4 +1,3 @@
-2023-09-11: 
-filler_text_here. 
-Monday,  
-get-date -f 'dddd MMM. dd, xx:xx \to hh:mm (x \h xx \min - a\t \ho\me):'
+2023-09-20: 
+Today I . 
+28, 20, 09 
