@@ -19,7 +19,7 @@ Why spend 20 seconds every time changing text in the entry to today's date manua
 >#### General format
 >__*<ins>yyyy</ins>*-*<ins>mm</ins>*-*<ins>dd</ins>*:__  
 >Today I *<ins>what-i-did</ins>*.  
->*<ins>Weekday</ins>*, *<ins>Mo.</ins>*[^f1] *<ins>dd</ins>*, *<ins>hh1</ins>*:*<ins>mm1</ins>* to *<ins>hh2</ins>*:*<ins>mm2</ins>* (*<ins>hh2</ins> - <ins>hh1</ins>* h *<ins>mm1</ins> - <ins>mm2</ins>* min[^f2] – at *<ins>school</ins>*[^f3]):
+>*<ins>Weekday</ins>*, *<ins>Mo.</ins>*[^f1] *<ins>dd</ins>*, *<ins>hh1</ins>*:*<ins>mm1</ins>* to *<ins>hh2</ins>*:*<ins>mm2</ins>* (*<ins>hh2</ins> - <ins>hh1</ins>* h *<ins>mm1</ins> - <ins>mm2</ins>* min[^f2] – at *<ins>school</ins>*[^f3]):  
 >&nbsp;&nbsp;&nbsp;&nbsp;- *<ins>What-i-did</ins>*.  
 >*<ins>Weekday</ins>*, *<ins>Mo.</ins>* *<ins>dd</ins>*, *<ins>hh1</ins>*:*<ins>mm1</ins>* to *<ins>hh2</ins>*:*<ins>mm2</ins>* (*<ins>hh2</ins> - <ins>hh1</ins>* h *<ins>mm1</ins> - <ins>mm2</ins>* min – at *<ins>home</ins>*):  
 >&nbsp;&nbsp;&nbsp;&nbsp;- *<ins>More-of-what-i-did</ins>*.  
