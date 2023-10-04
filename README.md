@@ -4,22 +4,31 @@
 Why spend 20 seconds every time changing text in the entry to today's date manually, when you could spend 50 hours developing an automated solution that does it for you?
 
 ### A journal entry typically looks like this:
->*yyyy*-*mm*-*dd*:
->Today I *what-i-did*.
+
+>#### Specific values example
+>**2023-09-07:**  
+>Today I prepared this. I also worked on this and that.  
+>Thursday, Sept. 07, 14:30 to 15:50 (1 h 20 min – at school):  
+>&nbsp;&nbsp;&nbsp;&nbsp;- Prepared this by looking at that and that.  
+>Thursday, Sept. 07, 21:00 to 23:10 (2 h 10 min – at home):  
+>&nbsp;&nbsp;&nbsp;&nbsp;- Worked on this part of that.  
+>Thursday, Sept. 07, 23:10 to 23:55 (0 h 45 min – at home):  
+>&nbsp;&nbsp;&nbsp;&nbsp;- Worked on that.  
+>Thursday, Sept. 07, Total time: 4 h 15 min
+
+>#### General format
+>__*yyyy*-*mm*-*dd*:__  
+>Today I *what-i-did*.  
 >*Weekday*, *Mo.*[^f1] *dd*, *hh1*:*mm1* to *hh2*:*mm2* (*hh2 - hh1* h *mm1 - mm2* min[^f2] – at *school*[^f3]):
->	- *what-i-did*
->*Weekday*, *Mo.* *dd*, *hh1*:*mm1* to *hh2*:*mm2* (*hh2 - hh1* h *mm1 - mm2* min – at *home*):
->	- *more-of-what-i-did*
+>&nbsp;&nbsp;&nbsp;&nbsp;- *What-i-did*.  
+>*Weekday*, *Mo.* *dd*, *hh1*:*mm1* to *hh2*:*mm2* (*hh2 - hh1* h *mm1 - mm2* min – at *home*):  
+>&nbsp;&nbsp;&nbsp;&nbsp;- *More-of-what-i-did*.  
 >*Weekday*, *Mo.* *dd*, Total time: *hht* h *mmt* min[^f4]
 
-[^f1]: Mo. means short form of month (==Sept.==, ==Oct.==, etc.)
+[^f1]: Mo. means short form of month (Sept., Oct., etc.)
 [^f2]: How much time you spent on the task
 [^f3]: \[school, home, bus, etc.\]
 [^f4]: The *hh* *mm* total time spent during the day
-
-
-## Explanation
-Journal entries have common elements, such as current date formats, a certain number of work sections, location where the work section was done, etc. Instead of manually copy and pasting a previous entry and then modifying all the information, this could be done automatically through a script.
 
 ### Note:
 This script uses a formula from a *[website](https://www.almanac.com/how-find-day-week)* to find the day of the week from the date, and with it's current iteration only works until 2099. However, this could be changed to a funky loop that I don't yet understand to get the date from WMIC
