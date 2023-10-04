@@ -17,14 +17,13 @@ Why spend 20 seconds every time changing text in the entry to today's date manua
 >Thursday, Sept. 07, Total time: 4 h 15 min
 
 >#### General format
-[Font tags are to make the placeholders more obvious.]: #
->__*<font color="silver">yyyy</font>*-*<font color="silver">mm</font>*-*<font color="silver">dd</font>*:__  
->Today I *<font color="silver">what-i-did</font>*.  
->*<font color="silver">Weekday</font>*, *<font color="silver">Mo.</font>*[^f1] *<font color="silver">dd</font>*, *<font color="silver">hh1</font>*:*<font color="silver">mm1</font>* to *<font color="silver">hh2</font>*:*<font color="silver">mm2</font>* (*<font color="silver">hh2</font> - <font color="silver">hh1</font>* h *<font color="silver">mm1</font> - <font color="silver">mm2</font>* min[^f2] – at *<font color="silver">school</font>*[^f3]):
->&nbsp;&nbsp;&nbsp;&nbsp;- *<font color="silver">What-i-did</font>*.  
->*<font color="silver">Weekday</font>*, *<font color="silver">Mo.</font>* *<font color="silver">dd</font>*, *<font color="silver">hh1</font>*:*<font color="silver">mm1</font>* to *<font color="silver">hh2</font>*:*<font color="silver">mm2</font>* (*<font color="silver">hh2</font> - <font color="silver">hh1</font>* h *<font color="silver">mm1</font> - <font color="silver">mm2</font>* min – at *<font color="silver">home</font>*):  
->&nbsp;&nbsp;&nbsp;&nbsp;- *<font color="silver">More-of-what-i-did</font>*.  
->*<font color="silver">Weekday</font>*, *<font color="silver">Mo.</font>* *<font color="silver">dd</font>*, Total time: *<font color="silver">hht</font>* h *<font color="silver">mmt</font>* min[^f4]
+>__*<ins>yyyy</ins>*-*<ins>mm</ins>*-*<ins>dd</ins>*:__  
+>Today I *<ins>what-i-did</ins>*.  
+>*<ins>Weekday</ins>*, *<ins>Mo.</ins>*[^f1] *<ins>dd</ins>*, *<ins>hh1</ins>*:*<ins>mm1</ins>* to *<ins>hh2</ins>*:*<ins>mm2</ins>* (*<ins>hh2</ins> - <ins>hh1</ins>* h *<ins>mm1</ins> - <ins>mm2</ins>* min[^f2] – at *<ins>school</ins>*[^f3]):
+>&nbsp;&nbsp;&nbsp;&nbsp;- *<ins>What-i-did</ins>*.  
+>*<ins>Weekday</ins>*, *<ins>Mo.</ins>* *<ins>dd</ins>*, *<ins>hh1</ins>*:*<ins>mm1</ins>* to *<ins>hh2</ins>*:*<ins>mm2</ins>* (*<ins>hh2</ins> - <ins>hh1</ins>* h *<ins>mm1</ins> - <ins>mm2</ins>* min – at *<ins>home</ins>*):  
+>&nbsp;&nbsp;&nbsp;&nbsp;- *<ins>More-of-what-i-did</ins>*.  
+>*<ins>Weekday</ins>*, *<ins>Mo.</ins>* *<ins>dd</ins>*, Total time: *<ins>hht</ins>* h *<ins>mmt</ins>* min[^f4]
 
 [^f1]: Mo. means short form of month (Sept., Oct., etc.)
 [^f2]: Total time spent on the task
