@@ -25,10 +25,12 @@ Why spend 20 seconds every time changing text in the entry to today's date manua
 >&nbsp;&nbsp;&nbsp;&nbsp;- *<ins>More-of-what-i-did</ins>*.  
 >*<ins>Weekday</ins>*, *<ins>Mo.</ins>* *<ins>dd</ins>*, Total time: *<ins>hht</ins>* h *<ins>mmt</ins>* min[^f4]
 
-[^f1]: Mo. means short form of month (Sept., Oct., etc.)
+[^f1]: Short form of month (Sept., Oct., etc.)
 [^f2]: Total time spent on the task
 [^f3]: \[school, home, bus, etc.\]
 [^f4]: Total time spent throughout the day
 
 ### Note:
 This script uses a formula from a *[website](https://www.almanac.com/how-find-day-week)* to find the day of the week from the date, and with it's current iteration only works until 2099. However, this could be changed to a funky loop that I don't yet understand to get the date from WMIC
+
+### Footnotes:

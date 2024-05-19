@@ -4,8 +4,6 @@
 :: Check for leap year for the month's key number
 :: Naming conventions and organization
 :: Optimize spacing (currently adding useless spaces cause of improper spacing)
-:: Empty the variables at the end
-:: Ideally, would do the for loop to look through files and get DOW instead of formula
 
 :: PLANNING OUT THE CODE
 :: [Today's date] > journal_entry.txt
