@@ -1,7 +1,6 @@
 @echo off setlocal
 
 :: TODO
-:: Check for leap year for the month's key number
 :: Naming conventions and organization
 :: Optimize spacing (currently adding useless spaces cause of improper spacing)
 
@@ -12,40 +11,78 @@
 :: assuming %1 gets it as string, transfer into variable with set /A no-entries=%1
 :: (/A is for when value needs to be numeric)
 :: ideally, would have key value pairs and set dayofweek from that (loop prob better)
-:: how to know which day of week based on %date% (from website):
-:: take last two digits of year
-:: add to that 1/4 of itself (no remainder)
-:: add day of month and key number for month (view website)
-:: -1 from the sum
-:: divide by 7 -> remainder is day of week
-:: if no remainder, day is saturday
-
-:: GETTING D.O.W.
-SET /a dow=%DATE:~2,2%
-SET /a dow=dow/4 + dow
-SET /a dom=%DATE:~8,2%
-SET month=%DATE:~5,2%
-::IF %month:~0,1%==0 SET /a month
-::IF "%month:~0,1%" == "0" SET /a "month=%month:~1%"
-SET /a month_key=0
+:: to determine which day of week: wmic path win32_localtime get dayofweek
 
 :: ACTUAL CODE
 :: Empty the file and print DATE (already formatted well)
-echo %DATE%: > journal_entry.txt
-echo Today I . >> journal_entry.txt
-:: Create variable month-short and set it to ...
-::Set month-short=Jan. Feb. Mar. Apr. Ma. Jun. Jul. Aug. Sept. Oct. Nov. Dec.
-::echo %month-short% >> journal_entry.txt
-:: To explain...
-:: for /f %%i in ('powershell ^(get-date^).DayOfWeek') do (set dow=%%i)
-:: Add day of week to the file
-echo %dow%, %dom%, %month% >> journal_entry.txt
+ECHO %DATE%: > journal_entry.txt
+::Print simple text line
+ECHO Today I . >> journal_entry.txt
+:: GETTING DayOfWeek
+SET /a dow=wmic path win32_localtime get dayofweek
+:: Set the DayOfWeek to the corresponding string
+IF "%dow%"=="0" (
+    SET dow=Sunday
+) ELSE IF "%dow%"=="1" (
+	SET dow=Monday
+) ELSE IF "%dow%"=="2" (
+    SET dow=Tuesday
+) ELSE IF "%dow%"=="3" (
+    SET dow=Wednesday
+) ELSE IF "%dow%"=="4" (
+    SET dow=Thursday
+) ELSE IF "%dow%"=="5" (
+    SET dow=Friday
+) ELSE IF "%dow%"=="6" (
+    SET dow=Saturday
+)
+:: GETTING Month
+SET month-short=%DATE:~5,2%
+:: Set the month-short to the corresponding string
+:: (Jan.Feb. Mar. Apr. Ma. Jun. Jul. Aug. Sept. Oct. Nov. Dec.)
+IF "%month-short%"=="01" (
+    SET month-short=Jan.
+) ELSE IF "%month-short%"=="02" (
+	SET month-short=Feb.
+) ELSE IF "%month-short%"=="03" (
+    SET month-short=Mar.
+) ELSE IF "%month-short%"=="04" (
+    SET month-short=Apr.
+) ELSE IF "%month-short%"=="05" (
+    SET month-short=Ma.
+) ELSE IF "%month-short%"=="06" (
+    SET month-short=Jun.
+) ELSE IF "%month-short%"=="07" (
+    SET month-short=Jul.
+) ELSE IF "%month-short%"=="08" (
+    SET month-short=Aug.
+) ELSE IF "%month-short%"=="09" (
+    SET month-short=Sept.
+) ELSE IF "%month-short%"=="10" (
+    SET month-short=Oct.
+) ELSE IF "%month-short%"=="11" (
+    SET month-short=Nov.
+) ELSE IF "%month-short%"=="12" (
+    SET month-short=Dec.
+)
+:: GETTING DAYOFMONTH
+SET /a dom=%DATE:~8,2%
+::GETTING CURRENT HOUR
+SET /a hour2=%TIME:~0,2%
+::GETTING CURRENT MINUTE
+SET /a minute=%TIME:~3,2%
+::GETTING STARTED HOUR TODO: have input for this
+SET /a hour1=%hour2% - 1
+::GETTING TIME SPENT
+SET /a hour-diff=%hour2% - %hour1%
+:: Print the next line formatted with all the variables:
+ECHO %dow%, %month-short% %dom%, %hour1%:%minute% to %hour2%:%minute% (%hour-diff% h mm m - at school): >> journal_entry.txt
 :: Opens the file
-start notepad journal_entry.txt
+START notepad journal_entry.txt
 
 :: FOR DEVELOPMENT
 :: Empty all variables to track changes
 SET dow=
 SET dom=
-SET month=
-SET month_key=
+SET month-short=
+SET hour=
