@@ -10,9 +10,9 @@
 :: Print DATE (already formatted well) and start new file
 echo %DATE%: > journal_entry.txt
 echo filler_text_here. >> journal_entry.txt
-:: Create variable month-short and set it to ...
-::Set month-short=Jan. Feb. Mar. Apr. Ma. Jun. Jul. Aug. Sept. Oct. Nov. Dec.
-::echo %month-short% >> journal_entry.txt
+:: Create variable month_short and set it to ...
+::Set month_short=Jan. Feb. Mar. Apr. Ma. Jun. Jul. Aug. Sept. Oct. Nov. Dec.
+::echo %month_short% >> journal_entry.txt
 :: To explain...
 for /f %%i in ('powershell ^(get-date^).DayOfWeek') do (set dow=%%i)
 :: Add day of week to the file
