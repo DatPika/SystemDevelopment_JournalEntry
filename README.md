@@ -10,12 +10,12 @@ Why spend 20 seconds every time changing text in the entry to today's date manua
 > 
 > **2023-09-07:**  
 > Today I prepared this. I also worked on this and that.  
-> Thursday, Sept. 07, 14:30 to 15:50 (1 h 20 min – at school):
-> &nbsp;&nbsp;&nbsp;&nbsp;- Prepared this by looking at that and that.
-> Thursday, Sept. 07, 21:00 to 23:10 (2 h 10 min – at home):
-> &nbsp;&nbsp;&nbsp;&nbsp;- Worked on this part of that.
-> Thursday, Sept. 07, 23:10 to 23:55 (0 h 45 min – at home):
-> &nbsp;&nbsp;&nbsp;&nbsp;- Worked on that.
+> Thursday, Sept. 07, 14:30 to 15:50 (1 h 20 min – at school):  
+> &nbsp;&nbsp;&nbsp;&nbsp;- Prepared this by looking at that and that.  
+> Thursday, Sept. 07, 21:00 to 23:10 (2 h 10 min – at home):  
+> &nbsp;&nbsp;&nbsp;&nbsp;- Worked on this part of that.  
+> Thursday, Sept. 07, 23:10 to 23:55 (0 h 45 min – at home):  
+> &nbsp;&nbsp;&nbsp;&nbsp;- Worked on that.  
 > Thursday, Sept. 07, Total time: 4 h 15 min
 
 > #### General format
