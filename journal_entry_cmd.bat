@@ -1,4 +1,4 @@
-@echo off setlocal enabledelayedexpansion
+@echo off setlocal
 
 :: TODO
 :: Naming conventions and organization
@@ -18,7 +18,13 @@ ECHO %DATE%: > journal_entry.txt
 ::Print simple text line
 ECHO Today I . >> journal_entry.txt
 :: GETTING DayOfWeek
-SET /a dow=wmic path win32_localtime get dayofweek
+FOR /F "skip=1" %%A IN ('WMIC Path Win32_LocalTime Get DayOfWeek' ) DO (
+  ::Setting DayOfWeek to the corresponding number
+  SET dow=%%A
+  ::Because there's an empty line, we leave the loop after getting our value
+  GOTO :break
+)
+:break
 :: Set the DayOfWeek to the corresponding string
 IF "%dow%"=="0" (
     SET dow=Sunday
@@ -73,19 +79,21 @@ SET /a minute2=%TIME:~3,2%
 ::SET VARIABLE TO CONTINUE THE LOOP
 SET continue_loop=Y
 :more_to_process
-    if !continue_loop! == Y (
+    if %continue_loop% == Y (
         ::GETTING TIME SPENT
         SET /p hour_diff=Hours spent on task:
         SET /p minute_diff=Minutes spent on task:
         ::GETTING STARTED HOUR
-        SET /a hour1=!hour2! - !hour_diff!
+        SET /a hour1=%hour2% - %hour_diff%
         ::GETTING STARTED MINUTE
-        SET /a minute1=!minute2! - !minute_diff!
+        SET /a minute1=%minute2% - %minute_diff%
         ::GET USER INPUT FOR LOCATION
         SET /p location=Enter location:
         :: Print the next line formatted with all the variables:
-        ECHO !dow!, !month_short! !dom!, !hour1!:!minute1! to !hour2!:!minute2! (!hour_diff! h !minute_diff! m - at !location!): >> journal_entry.txt
-        SET /p continue_loop=Add another entry? [Y/N]:
+        ECHO %dow%, %month_short% %dom%, %hour1%:%minute1% to %hour2%:%minute2% (%hour_diff% h %minute_diff% m - at %location%^): >>  journal_entry.txt
+        ECHO <TAB>- Worked on .
+        ::ASKING USER IF ANOTHER ENTRY IS NEEDED
+        SET /p continue_loop=Add another entry? [Y/N]: 
         goto :more_to_process
     )
 :: Opens the file
